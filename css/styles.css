@@ -1,0 +1,41 @@
+.jumbotron{
+    background-color: #D1C4E9 !important;
+    padding:70px 30px 70px 164px;
+    margin:0px auto;
+    font : oblique 20px Arial, Helvetica, sans-serif;
+    color: black;
+    border-radius: 10px;
+    
+  
+}
+
+
+.body-about{
+    font : 50px Arial, Helvetica, sans-serif;
+}
+.container{
+    padding:27px 30px 30px 164px;
+    margin:0px auto;
+}
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 20px 0px 10px 0px;
+    border-bottom: 1px ridge;
+    min-height:0px;
+}
+
+.footer{
+    background-color: #D1C4E9;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
