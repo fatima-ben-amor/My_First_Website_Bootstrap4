@@ -3,7 +3,7 @@
 
 <head>
     <title>Ristorante Con Fusion</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body >
@@ -22,7 +22,7 @@
          </ul>
 
          <span class="navbar-text">
-             <a data-toggle="modal" data-target="#loginModal">
+             <a data-toggle="modal" id="loginModal">
                  <span class="fa fa-sign-in">
                         Login
                  </span>
@@ -33,7 +33,7 @@
     </div>    
 </nav>
 <!--for login-->
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="LoginBody" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
@@ -186,7 +186,7 @@
                 <div class="col-12 col-sm align-self-center">
                     <img src="/img/logo.png" class="img-fluid">
                 </div>
-                <div class="col-sm-3"> <a   type="button" class="btn btn-warning btn-lg btn-block" data-toggle="modal" data-target="#ReserveModal">
+                <div class="col-sm-3"> <a  id="ReserveButton" type="button" class="btn btn-warning btn-lg btn-block"  data-target="#ReserveModal">
                      Reserve Table </a></div>
                  
             </div>
@@ -414,14 +414,30 @@
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <!--
+ 
   <script>
-        $(document).ready(function() {
-          $ ('[data-toggle="tooltip"]').tooltip();
-            
-        });
+ $(document).ready(function () {
+    $("#ReserveButton").click(function(){
+   
+   $("#ReserveModal").modal();
+              
+
+ })
+    });
+
     </script>
-    -->
+
+<script>
+    $(document).ready(function () {
+       $("#loginModal").click(function(){
+          $("#LoginBody").modal();
+                
+   
+    })
+       });
+   
+       </script>
+   
 
     <script>
         $(document).ready(function () {
@@ -431,8 +447,8 @@
         
         //for carouselButton button if a click is done by a user that's mean we shoud execute which into the function:
         $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
+                if ($("#carouselButton").children("span").hasClass('fa-pause')) { //if this carouselButton has a children span and his class called fa-pause
+                    $("#mycarousel").carousel('pause'); //alors carousel va initier la fonction pause 
                     $("#carouselButton").children("span").removeClass('fa-pause');
                     $("#carouselButton").children("span").addClass('fa-play');
                 }
@@ -441,7 +457,8 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
-            })});
+            })}
+            );
         
     
     </script>
